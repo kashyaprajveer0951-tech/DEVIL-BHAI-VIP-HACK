@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVIL BHAI VIP MOD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--neon:#00ff41;--neon2:#00e5ff;--danger:#ff003c;--gold:#ffea00;--purple:#bf00ff;--bg:#020202}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#fff;font-family:'Share Tech Mono',monospace;overflow-x:hidden;user-select:none;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.09) 0px,rgba(0,0,0,.09) 1px,transparent 1px,transparent 4px);pointer-events:none;z-index:998}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.75) 100%);pointer-events:none;z-index:997}
+
+/* BOOT */
+#boot{position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:40px clamp(20px,6vw,80px);font-family:'Share Tech Mono',monospace;font-size:clamp(11px,2.5vw,14px);transition:opacity .6s ease;overflow-y:auto}
+#boot.fade{opacity:0;pointer-events:none}
+.boot-title{color:var(--danger);font-weight:bold;font-size:clamp(13px,3vw,18px);margin-bottom:24px;letter-spacing:4px}
+.boot-line{margin-bottom:4px;line-height:1.7;animation:bootIn .1s ease}
+@keyframes bootIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+@keyframes cur{0%,100%{opacity:1}50%{opacity:0}}
+.cursor{animation:cur .7s infinite}
+
+/* GLITCH */
+.glitch-title{font-family:'Orbitron',monospace;font-size:clamp(20px,6.5vw,36px);font-weight:900;letter-spacing:6px;position:relative;color:#fff;text-shadow:0 0 8px var(--neon),0 0 30px var(--neon),0 0 60px rgba(0,255,65,.3);animation:gm 1.8s infinite}
+.glitch-title::before,.glitch-title::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%}
+.glitch-title::before{color:var(--danger);clip-path:polygon(0 15%,100% 15%,100% 38%,0 38%);animation:gb 1.8s infinite;opacity:.85}
+.glitch-title::after{color:var(--neon2);clip-path:polygon(0 62%,100% 62%,100% 82%,0 82%);animation:ga 1.8s infinite;opacity:.85}
+@keyframes gm{0%,88%,100%{transform:none}90%{transform:skewX(-5deg) translateX(4px);filter:hue-rotate(90deg)}92%{transform:skewX(5deg) translateX(-4px);filter:hue-rotate(-90deg)}94%{transform:skewX(-2deg) translateX(2px)}96%{transform:none}}
+@keyframes gb{0%,88%,100%{transform:none;clip-path:polygon(0 15%,100% 15%,100% 38%,0 38%)}90%{transform:translateX(-6px);clip-path:polygon(0 10%,100% 10%,100% 45%,0 45%)}93%{transform:translateX(6px)}}
+@keyframes ga{0%,88%,100%{transform:none;clip-path:polygon(0 62%,100% 62%,100% 82%,0 82%)}91%{transform:translateX(6px);clip-path:polygon(0 58%,100% 58%,100% 86%,0 86%)}94%{transform:translateX(-6px)}}
+
+/* WARN BANNER */
+.warn-banner{background:rgba(255,0,60,.1);border:1px solid rgba(255,0,60,.5);border-radius:6px;padding:6px 14px;font-size:10px;letter-spacing:3px;color:var(--danger);font-family:'Orbitron',monospace;animation:wb 2s infinite;display:inline-flex;align-items:center;gap:8px}
+@keyframes wb{0%,100%{border-color:rgba(255,0,60,.5);box-shadow:none}50%{border-color:var(--danger);box-shadow:0 0 12px rgba(255,0,60,.4)}}
+
+/* CARD */
+.hack-card{background:linear-gradient(160deg,rgba(0,255,65,.03),rgba(0,0,0,.7),rgba(255,0,60,.02));border-top:1px solid rgba(0,255,65,.3);border-left:1px solid rgba(0,255,65,.15);border-right:1px solid rgba(255,0,60,.15);border-bottom:1px solid rgba(255,0,60,.3);border-radius:4px;padding:22px 18px;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,255,65,.06),0 0 80px rgba(255,0,60,.04),inset 0 0 60px rgba(0,0,0,.5);width:100%;max-width:400px;text-align:center;margin:0 auto}
+.hack-card::before{content:'';position:absolute;top:0;left:0;width:24px;height:24px;border-top:2px solid var(--neon);border-left:2px solid var(--neon);border-radius:4px 0 0 0}
+.corner-br{position:absolute;bottom:0;right:0;width:24px;height:24px;border-bottom:2px solid var(--danger);border-right:2px solid var(--danger);border-radius:0 0 4px 0}
+.scan-line{position:absolute;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,rgba(0,255,65,.5),transparent);animation:scan 3s linear infinite;pointer-events:none}
+@keyframes scan{0%{top:-2px}100%{top:102%}}
+
+/* TIMER */
+.vip-timer{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(32px,9vw,44px);letter-spacing:6px;font-variant-numeric:tabular-nums}
+.safe{color:var(--neon);text-shadow:0 0 20px rgba(0,255,65,.6)}
+.warn{color:var(--gold);text-shadow:0 0 20px rgba(255,234,0,.6);animation:tw .8s infinite}
+.urgent{color:var(--danger);text-shadow:0 0 20px rgba(255,0,60,.8);animation:tu .35s infinite}
+@keyframes tw{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes tu{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.12);opacity:.6}}
+
+/* PREDICTION */
+.pred-display{font-family:'Orbitron',monospace;font-size:clamp(54px,18vw,80px);font-weight:900;letter-spacing:6px;display:block}
+.pred-big{color:var(--neon);text-shadow:0 0 20px var(--neon),0 0 60px rgba(0,255,65,.5),0 0 120px rgba(0,255,65,.2)}
+.pred-small{color:var(--neon2);text-shadow:0 0 20px var(--neon2),0 0 60px rgba(0,229,255,.5),0 0 120px rgba(0,229,255,.2)}
+.pred-pop{animation:pp .55s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes pp{0%{transform:scale(.2) rotate(-12deg);opacity:0;filter:blur(12px)}50%{transform:scale(1.2) rotate(3deg);opacity:1;filter:blur(0)}75%{transform:scale(.95)}100%{transform:scale(1) rotate(0)}}
+
+/* BREACH */
+#breach{position:fixed;inset:0;pointer-events:none;z-index:500;opacity:0}
+.breach-win{animation:bw .7s ease forwards}
+.breach-loss{animation:bl .7s ease forwards}
+@keyframes bw{0%{opacity:.5;background:rgba(0,255,65,.15)}30%{opacity:.7;background:rgba(0,255,65,.25)}100%{opacity:0}}
+@keyframes bl{0%{opacity:.5;background:rgba(255,0,60,.2)}20%{opacity:.8;background:rgba(255,0,60,.35)}100%{opacity:0}}
+
+/* SYS LOG */
+.sys-log{font-size:10px;color:rgba(0,255,65,.5);letter-spacing:1px;text-align:left;line-height:1.8;min-height:18px;margin:10px 0 12px}
+
+/* STATS */
+.stat-chip{border-radius:3px;padding:5px 10px;font-size:10px;font-family:'Orbitron',monospace;letter-spacing:1px;border:1px solid;display:inline-block}
+.chip-acc{border-color:rgba(0,255,65,.4);background:rgba(0,255,65,.07);color:var(--neon)}
+.chip-streak{border-color:rgba(255,234,0,.4);background:rgba(255,234,0,.07);color:var(--gold)}
+.chip-loss{border-color:rgba(255,0,60,.4);background:rgba(255,0,60,.07);color:var(--danger)}
+.chip-total{border-color:rgba(191,0,255,.4);background:rgba(191,0,255,.07);color:var(--purple)}
+.acc-track{background:rgba(255,255,255,.06);border-radius:99px;height:4px;overflow:hidden;margin-top:4px}
+.acc-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--danger),var(--gold),var(--neon));transition:width 1s ease}
+
+/* SAFE BOX */
+.safe-box{border:1px solid rgba(255,234,0,.35);border-radius:3px;padding:10px 12px;background:rgba(255,234,0,.04);font-size:12px;color:var(--gold);letter-spacing:3px;position:relative;overflow:hidden;text-align:center;margin-bottom:16px}
+.safe-box::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,234,0,.07),transparent);animation:sh 2.5s linear infinite}
+@keyframes sh{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{color:#383838;border-bottom:1px solid #141414;padding:8px 3px;font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px}
+td{padding:9px 3px;border-bottom:1px solid #0d0d0d;text-align:center}
+tbody tr:first-child{animation:rowIn .5s ease}
+@keyframes rowIn{0%{transform:translateX(-10px);opacity:0;background:rgba(0,255,65,.08)}100%{transform:none;opacity:1;background:transparent}}
+.wc{color:var(--neon);font-weight:bold}
+.lc{color:var(--danger);font-weight:bold}
+
+/* LIVE */
+.live-badge{display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:3px;color:var(--danger);font-family:'Orbitron',monospace}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--danger);box-shadow:0 0 6px var(--danger);animation:ld 1s infinite}
+@keyframes ld{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.2;transform:scale(.7)}}
+
+/* SIGNAL */
+.signal-bar{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.signal-bar span{width:3px;background:var(--neon);border-radius:1px;opacity:.2;transition:opacity .5s}
+.signal-bar span.on{opacity:1;box-shadow:0 0 4px var(--neon)}
+
+/* FW ROW */
+.fw-row{display:flex;gap:8px;align-items:center;font-size:9px;letter-spacing:2px;font-family:'Orbitron',monospace;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+.fw-ok{color:var(--neon)}
+.fw-warn{color:var(--gold)}
+
+/* TICKER */
+.ticker-wrap{position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,.92);border-top:1px solid rgba(255,0,60,.25);padding:7px 0;overflow:hidden;z-index:50}
+.ticker-inner{display:flex;gap:80px;white-space:nowrap;animation:tick 30s linear infinite;font-size:10px;letter-spacing:3px;color:rgba(255,0,60,.7);font-family:'Orbitron',monospace}
+@keyframes tick{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+
+/* LAYOUT */
+.page{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:28px 14px 80px;position:relative;z-index:1}
+.period-line{font-size:10px;letter-spacing:2px;color:#383838;font-family:'Share Tech Mono',monospace;margin-bottom:14px}
+.period-line span{color:rgba(0,255,65,.5)}
+.pred-label{font-size:9px;letter-spacing:4px;color:#444;font-family:'Orbitron',monospace;margin-bottom:2px}
+.stats-row{display:flex;justify-content:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+</style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- BREACH FLASH -->
+<div id="breach"></div>
+
+<!-- MATRIX CANVAS -->
+<canvas id="matrix" style="position:fixed;top:0;left:0;z-index:0;pointer-events:none;opacity:.22"></canvas>
+
+<!-- BOOT SCREEN -->
+<div id="boot">
+  <div class="boot-title">☠ DEVIL BHAI VIP MOD — BOOT SEQUENCE ☠</div>
+  <div id="bootLines"></div>
+</div>
+
+<!-- MAIN APP -->
+<div class="page" id="app" style="display:none">
+
+  <div class="warn-banner" style="margin-bottom:14px">⚠ UNAUTHORIZED ACCESS ACTIVE ⚠</div>
+
+  <div style="text-align:center;margin-bottom:20px">
+    <div class="glitch-title" data-text="DEVIL BHAI VIP MOD">DEVIL BHAI VIP MOD</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap">
+      <div class="live-badge"><span class="live-dot"></span>LIVE</div>
+      <span style="color:#333;font-size:9px;font-family:'Orbitron',monospace;letter-spacing:3px">STRICT LOGIC V15</span>
+      <span class="signal-bar" id="sigBars">
+        <span style="height:4px" class="on"></span>
+        <span style="height:7px" class="on"></span>
+        <span style="height:10px" class="on"></span>
+        <span style="height:13px" class="on"></span>
+        <span style="height:16px" class="on"></span>
+      </span>
+      <span id="connStatus" style="font-size:9px;color:var(--neon);font-family:'Orbitron',monospace;letter-spacing:2px">● SERVER OK</span>
+    </div>
+  </div>
+
+  <div class="fw-row">
+    <span class="fw-ok">🔒 FIREWALL: <b>BYPASSED</b></span>
+    <span class="fw-ok">🛡 TUNNEL: <b>AES-256</b></span>
+    <span class="fw-warn">⚡ PING: <b id="pingVal">12ms</b></span>
+    <span class="fw-ok">📡 FEED: <b>LIVE</b></span>
+  </div>
+
+  <div class="hack-card">
+    <div class="scan-line"></div>
+    <div class="corner-br"></div>
+
+    <div style="font-size:8px;letter-spacing:4px;color:#2a2a2a;font-family:'Orbitron',monospace;margin-bottom:4px">NEXT PERIOD IN</div>
+    <div class="vip-timer safe" id="timer">00:60</div>
+
+    <div class="period-line">PERIOD ▸ <span id="periodId">LOADING...</span></div>
+
+    <div class="stats-row" id="statsRow" style="display:none">
+      <div class="stat-chip chip-acc">
+        <div id="accPct">0% ACC</div>
+        <div class="acc-track" style="width:64px"><div class="acc-fill" id="accBar" style="width:0%"></div></div>
+      </div>
+      <div class="stat-chip chip-streak" id="streakChip">🔥 0×</div>
+      <div class="stat-chip chip-total" id="totalChip">0/0</div>
+    </div>
+
+    <div class="pred-label">TARGET PREDICTION</div>
+    <div class="pred-display pred-big pred-pop" id="predDisplay">...</div>
+
+    <div class="sys-log" id="sysLog">> SCANNING LIVE DATA STREAM...<span class="cursor">█</span></div>
+
+    <div class="safe-box" id="safeBox">🔍 SCANNING LIVE DATA STREAM...</div>
+
+    <table>
+      <thead><tr><th>PRD</th><th>PRED</th><th>NUM</th><th>STATUS</th></tr></thead>
+      <tbody id="logBody"><tr><td colspan="4" style="color:#2a2a2a;padding:18px">⏳ AWAITING FIRST TARGET...</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>☠ UNAUTHORIZED ACCESS ACTIVE — ALL TRAFFIC ENCRYPTED</span>
+    <span>⚡ DEVIL BHAI VIP — STRICT LOGIC V15 ENGINE ONLINE</span>
+    <span>🔴 FIREWALL BYPASSED — LIVE DATA STREAM INJECTED</span>
+    <span>💀 WINGO SEED ALGORITHM CRACKED — AES-256 TUNNEL ACTIVE</span>
+    <span>⚠ THIS TOOL IS FOR VIP MEMBERS ONLY — PROCEED WITH CAUTION</span>
+    <span>🔥 REAL-TIME PREDICTION ENGINE — 0ms LATENCY MODE</span>
+    <span>☠ UNAUTHORIZED ACCESS ACTIVE — ALL TRAFFIC ENCRYPTED</span>
+    <span>⚡ DEVIL BHAI VIP — STRICT LOGIC V15 ENGINE ONLINE</span>
+    <span>🔴 FIREWALL BYPASSED — LIVE DATA STREAM INJECTED</span>
+    <span>💀 WINGO SEED ALGORITHM CRACKED — AES-256 TUNNEL ACTIVE</span>
+  </div>
+</div>
+
+<script>
+// ── MATRIX RAIN ──
+(function(){
+  const c=document.getElementById('matrix'),ctx=c.getContext('2d');
+  let aid,cols,drops=[],colors=[];
+  const chars='01ABCDEF0123456789BIGSMALL☠💀⚡∑∆Ω';
+  const fs=12;
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;cols=Math.floor(c.width/fs);drops=Array(cols).fill(1);colors=Array(cols).fill(0).map(()=>Math.random()>.93?'red':Math.random()>.85?'gold':'green')}
+  resize();window.addEventListener('resize',resize);
+  setInterval(()=>{colors=Array(Math.floor(c.width/fs)).fill(0).map(()=>Math.random()>.93?'red':Math.random()>.85?'gold':'green')},4000);
+  function draw(){
+    ctx.fillStyle='rgba(0,0,0,0.055)';ctx.fillRect(0,0,c.width,c.height);
+    ctx.font=`bold ${fs}px 'Share Tech Mono',monospace`;
+    for(let i=0;i<cols;i++){
+      const ch=chars[Math.floor(Math.random()*chars.length)],t=Math.random(),col=colors[i]||'green';
+      ctx.fillStyle=t>.96?'#fff':col==='red'?(t>.7?'#ff003c':'rgba(180,0,30,.4)'):col==='gold'?(t>.7?'#ffea00':'rgba(180,150,0,.4)'):(t>.75?'#00ff41':'rgba(0,150,30,.35)');
+      ctx.fillText(ch,i*fs,drops[i]*fs);
+      if(drops[i]*fs>c.height&&Math.random()>.972)drops[i]=0;
+      drops[i]++;
+    }
+    aid=requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── BOOT SEQUENCE ──
+const BOOT_LINES=[
+  {t:'> INITIALIZING DEVIL BHAI VIP ENGINE...',d:0,c:'neon'},
+  {t:'> LOCATING TARGET SERVER: draw.ar-lottery01.com',d:300,c:'neon'},
+  {t:'> ESTABLISHING ENCRYPTED TUNNEL... [AES-256]',d:700,c:'neon'},
+  {t:'> BYPASSING CLOUDFLARE FIREWALL...',d:1100,c:'neon'},
+  {t:'  [████████████████████] 100% BYPASSED ✓',d:1600,c:'neon'},
+  {t:'> INJECTING PAYLOAD v15.0 INTO LIVE STREAM...',d:2000,c:'neon'},
+  {t:'> CRACKING WINGO SEED ALGORITHM...',d:2400,c:'neon'},
+  {t:'  [SEED: 0xDEADBEEF9F3A2C] CRACKED ✓',d:2900,c:'neon'},
+  {t:'> LOADING STRICT LOGIC MODULE...',d:3200,c:'neon'},
+  {t:'> ACTIVATING REAL-TIME PREDICTION ENGINE...',d:3600,c:'neon'},
+  {t:'',d:4000,c:''},
+  {t:'  ██████████████████████████████████████',d:4100,c:'gold'},
+  {t:'  ██  ACCESS GRANTED — DEVIL BHAI VIP  ██',d:4200,c:'gold'},
+  {t:'  ██████████████████████████████████████',d:4300,c:'gold'},
+  {t:'',d:4500,c:''},
+  {t:'> WARNING: UNAUTHORIZED USE IS PROHIBITED',d:4600,c:'red'},
+  {t:'> ALL SESSIONS ARE LOGGED & ENCRYPTED',d:4900,c:'red'},
+  {t:'> LAUNCHING INTERFACE...',d:5300,c:'neon'},
+];
+const bootEl=document.getElementById('bootLines');
+BOOT_LINES.forEach(({t,d,c})=>{
+  setTimeout(()=>{
+    const div=document.createElement('div');
+    div.className='boot-line';
+    div.style.color=c==='red'?'var(--danger)':c==='gold'?'var(--gold)':'var(--neon)';
+    div.textContent=t;
+    bootEl.appendChild(div);
+    bootEl.scrollTop=bootEl.scrollHeight;
+  },d);
+});
+setTimeout(()=>{
+  document.getElementById('boot').classList.add('fade');
+  setTimeout(()=>{
+    document.getElementById('boot').style.display='none';
+    document.getElementById('app').style.display='flex';
+  },600);
+},6000);
+
+// ── TIMER ──
+function startTimer(){
+  setInterval(()=>{
+    const now=new Date();let s=60-now.getUTCSeconds();if(s===60)s=0;
+    const pad=n=>String(n).padStart(2,'0');
+    const el=document.getElementById('timer');
+    el.textContent=`00:${pad(s)}`;
+    el.className='vip-timer '+(s<=5?'urgent':s<=15?'warn':'safe');
+  },1000);
+}
+startTimer();
+
+// ── SYS MESSAGES ──
+const SYS=[
+  '> PACKET RECEIVED FROM TARGET SERVER...',
+  '> ANALYZING ENTROPY PATTERN IN LIVE SEED...',
+  '> CROSS-REFERENCING LAST 5 DRAWS WITH ALGORITHM...',
+  '> DECRYPTION LAYER 3/3 COMPLETE...',
+  '> PREDICTION VECTOR COMPUTED — CONFIDENCE HIGH',
+  '> INJECTING OVERRIDE INTO DATA STREAM...',
+  '> SERVER RESPONDED: 200 OK — DATA CLEAN',
+  '> LIVE FEED SYNCHRONIZED — NEXT PERIOD LOCKED',
+];
+let sysI=0;
+setInterval(()=>{
+  sysI=(sysI+1)%SYS.length;
+  document.getElementById('sysLog').innerHTML=SYS[sysI]+'<span class="cursor">█</span>';
+},2800);
+
+// ── BREACH FLASH ──
+function breach(win){
+  const el=document.getElementById('breach');
+  el.className=win?'breach-win':'breach-loss';
+  setTimeout(()=>el.className='',750);
+}
+
+// ── PREDICTION LOGIC ──
+const B_POOL=[5,6,7,8,9],S_POOL=[0,1,2,3,4];
+let lastId=null,savedPred=null,savedOpps=[],logCount=0,totalW=0,totalP=0,streak=0,streakWin=true;
+
+async function runLogic(){
+  try{
+    const res=await fetch('https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json');
+    const json=await res.json();
+    const list=json.data.list;
+    const latest=list[0];
+
+    document.getElementById('connStatus').textContent='● SERVER OK';
+    document.getElementById('connStatus').style.color='var(--neon)';
+    document.getElementById('pingVal').textContent=Math.floor(Math.random()*20+8)+'ms';
+
+    const last5=list.slice(0,5).map(x=>parseInt(x.number)>=5?'BIG':'SMALL');
+    const nextPred=last5.filter(x=>x==='BIG').length>2?'BIG':'SMALL';
+
+    if(lastId!==latest.issueNumber){
+      const num=parseInt(latest.number);
+      const size=num>=5?'BIG':'SMALL';
+      const lp=savedPred||nextPred;
+      const lo=savedOpps;
+
+      if(lastId!==null){
+        const win=(lp===size)||lo.includes(num);
+        breach(win);
+        totalP++;
+        if(win){totalW++;}
+        if(streak===0){streakWin=win;streak=1;}
+        else if(win===streakWin){streak++;}
+        else{streakWin=win;streak=1;}
+
+        const acc=Math.round((totalW/totalP)*100);
+        const statsRow=document.getElementById('statsRow');
+        statsRow.style.display='flex';
+        document.getElementById('accPct').textContent=acc+'% ACC';
+        document.getElementById('accBar').style.width=acc+'%';
+        document.getElementById('streakChip').textContent=(streakWin?'🔥':'💀')+' '+streak+'×';
+        document.getElementById('streakChip').className='stat-chip '+(streakWin?'chip-streak':'chip-loss');
+        document.getElementById('totalChip').textContent=totalW+'/'+totalP;
+
+        const tbody=document.getElementById('logBody');
+        if(logCount===0)tbody.innerHTML='';
+        const tr=document.createElement('tr');
+        tr.innerHTML=`<td style="color:#444">${latest.issueNumber.slice(-3)}</td>
+<td style="color:${lp==='BIG'?'var(--neon)':'var(--neon2)'};font-family:'Orbitron',monospace;font-size:9px">${lp}</td>
+<td style="color:#666">${num}</td>
+<td class="${win?'wc':'lc'}">${win?'WIN 💯':'LOSS ❌'}</td>`;
+        tbody.insertBefore(tr,tbody.firstChild);
+        logCount++;
+        if(tbody.rows.length>20)tbody.deleteRow(tbody.rows.length-1);
+      }
+
+      lastId=latest.issueNumber;
+      savedPred=nextPred;
+      const pool=nextPred==='BIG'?S_POOL:B_POOL;
+      savedOpps=[...pool].sort(()=>0.5-Math.random()).slice(0,2);
+      document.getElementById('safeBox').textContent=`⚡ SAFE NUMS: [ ${savedOpps[0]} ] & [ ${savedOpps[1]} ] ⚡`;
+    }
+
+    document.getElementById('periodId').textContent=String(BigInt(latest.issueNumber)+1n);
+    const pd=document.getElementById('predDisplay');
+    pd.textContent=nextPred;
+    pd.className='pred-display '+(nextPred==='BIG'?'pred-big':'pred-small')+' pred-pop';
+    void pd.offsetWidth;
+    pd.className='pred-display '+(nextPred==='BIG'?'pred-big':'pred-small')+' pred-pop';
+
+  }catch(e){
+    document.getElementById('connStatus').textContent='● RECONNECTING';
+    document.getElementById('connStatus').style.color='var(--danger)';
+  }
+}
+runLogic();
+setInterval(runLogic,3000);
+</script>
+</body>
+</html>
